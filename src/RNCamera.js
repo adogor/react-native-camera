@@ -80,6 +80,7 @@ type PropsType = (typeof View.props) & {
   captureAudio?: boolean,
   useCamera2Api?: boolean,
   playSoundOnCapture?: boolean,
+  mirrorVideo?: boolean,
 };
 
 type StateType = {
@@ -171,6 +172,7 @@ export default class Camera extends React.Component<PropsType, StateType> {
     captureAudio: PropTypes.bool,
     useCamera2Api: PropTypes.bool,
     playSoundOnCapture: PropTypes.bool,
+    mirrorVideo: PropTypes.bool,
   };
 
   static defaultProps: Object = {
@@ -220,6 +222,7 @@ export default class Camera extends React.Component<PropsType, StateType> {
     captureAudio: false,
     useCamera2Api: false,
     playSoundOnCapture: false,
+    mirrorVideo: false,
   };
 
   _cameraRef: ?Object;

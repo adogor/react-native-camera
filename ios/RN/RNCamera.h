@@ -26,6 +26,7 @@
 @property(nonatomic, assign) NSInteger presetCamera;
 @property (assign, nonatomic) NSInteger flashMode;
 @property (assign, nonatomic) CGFloat zoom;
+@property (assign, nonatomic) BOOL mirrorVideo;
 @property (assign, nonatomic) NSInteger autoFocus;
 @property (assign, nonatomic) float focusDepth;
 @property (assign, nonatomic) NSInteger whiteBalance;

@@ -42,6 +42,7 @@ static NSDictionary *defaultFaceDetectorOptions = nil;
         self.previewLayer.needsDisplayOnBoundsChange = YES;
 #endif
         self.paused = NO;
+        self.mirrorVideo = false;
         [self changePreviewOrientation:[UIApplication sharedApplication].statusBarOrientation];
         [self initializeCaptureSessionInput];
         [self startSession];
@@ -411,6 +412,10 @@ static NSDictionary *defaultFaceDetectorOptions = nil;
 
     AVCaptureConnection *connection = [self.movieFileOutput connectionWithMediaType:AVMediaTypeVideo];
     [connection setVideoOrientation:[RNCameraUtils videoOrientationForInterfaceOrientation:[[UIApplication sharedApplication] statusBarOrientation]]];
+
+    if (self.mirrorVideo) {
+        [connection setVideoMirrored:YES];
+    }
 
     if (options[@"codec"]) {
       AVVideoCodecType videoCodecType = options[@"codec"];
