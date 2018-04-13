@@ -58,5 +58,5 @@ dependencies {
   implementation "com.google.android.gms:play-services-vision:$googlePlayServicesVersion"
   implementation "com.android.support:exifinterface:$supportLibVersion"
 
-  implementation 'com.github.react-native-community:cameraview:eb9f726215bbbfcc03a54db92e480d4d02e0c001'
+  implementation 'com.github.adogor:cameraview:3c0a54e2180cf7f31f0aa1af3f2e936142d23419'
 }
